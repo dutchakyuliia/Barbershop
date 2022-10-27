@@ -1,0 +1,242 @@
+:root {
+    --primary-text-color: #555555;;
+    --title-text-color: #303030;
+    --accent-color-orange: #FF6C00;
+    --accent-color-white: #ffffff;
+    --accent-color-grey: #9DA4BD;
+    --backgroud-color: #ffffff;
+    --span-light: rgba(157, 164, 189, 0.6);
+}
+
+/*! Глобальні стилі */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    background-color: var(--backgroud-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+p {
+    font-size: 18px;
+    line-height: 1.6667;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* header */
+.container.header {
+   
+    display: flex;
+        align-items: center;
+}
+.logo{
+    margin-right: 130px;
+}
+.nav .list {
+    display: flex;
+}
+
+.li-nav:not(:last-child) {
+    margin-right: 30px;
+}
+
+.link {
+    display: block;
+    padding: 30px 0;
+    font-weight: 600;
+        font-size: 12px;
+        line-height: 1.3333;
+        letter-spacing: 0.1em;
+        color: var(--accent-color-white);
+        text-decoration: none;
+}
+.header-info{
+    margin-left: auto;
+}
+.link.tel {
+margin-right: 40px;
+}
+.link:hover, .link:focus {
+    color: var(--accent-color-orange)
+}
+.button-light {
+    display: block;
+    min-width: 160px;
+    min-height: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.3333;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+border: 1px solid #FF6C00;
+    border-radius: 25px;
+padding: 12px 20px}
+    
+.button-light:hover, .button-light:focus {
+    color:var(--accent-color-white);
+    background-color: #FF6C00;
+}
+.back {}
+.forwar{}
+
+/* main */
+/* hero */
+.container.hero {
+    
+    background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: 1070px 680px;
+}
+.social {
+    margin-right: 40px;
+}
+
+.link-social {
+font-weight: 600;
+    font-size: 11px;
+    line-height: 1.3636;
+        color: var(--title-text-color);
+    transform: rotate(-90deg);
+    text-decoration: none;
+}
+.link-social:hover, .link-social:focus {
+    color: var(--accent-color-orange);
+}
+.span-light {
+    font-weight: 600;
+        font-size: 11px;
+        line-height: 1.3636;
+        text-transform: uppercase;
+        color: var(--span-light)
+}
+
+h1.title-light  {
+    font-family: 'Raleway', sans-serif;
+        font-style: normal;
+    font-weight: 700;
+        font-size: 72px;
+        line-height: 1.18001;
+               letter-spacing: 0.05em;
+               color: var(--accent-color-white)
+}
+
+.text-light {
+    font-size: 18px;
+        line-height: 1.6667;
+        color: var(--accent-color-grey);
+}
+
+/*  best barbershop*/
+.container.best {display: flex;}
+.list.best {
+    display: flex;
+    margin-right: 30px;
+}
+.li-best { margin-right: 30px;}
+
+.span-dark {
+    font-weight: 600;
+        font-size: 11px;
+        line-height: 1.3636;
+                text-transform: uppercase;
+        color: var(--title-text-color);
+}
+
+.title-dark {
+    font-weight: 700;
+        font-size: 42px;
+        line-height: 1.1667;
+        letter-spacing: 0.05em;
+        color:var(--title-text-color)
+}
+
+.text-reason {}
+
+.button-dark {}
+
+/* prices */
+.prices{
+    
+    max-width: 1600px;
+    background-image: url(../images/prices.jpg);
+    background-repeat: no-repeat;
+    background-size: 1600px 692px;
+}
+
+/* reason */
+.numbers {}
+
+.sup {}
+
+.numbers-text {}
+
+/* our barbers */
+.barber {}
+
+.barber-type {}
+
+.hidden {}
+/* contact info */
+.contact-info {
+    background-color: #191C26;
+background-image: url(../images/contacts.jpg);
+background-repeat: no-repeat;
+    background-size: 785px 634px;
+}
+.contacts {}
+
+.link-address {}
+
+.link-address-mail {}
+
+.working-hours {}
+/* footer */
+.footer {}
+
+.copyright {}
