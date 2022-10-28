@@ -68,9 +68,9 @@ p {
 
 /* header */
 .container.header {
-   
     display: flex;
         align-items: center;
+       
 }
 .logo{
     margin-right: 130px;
@@ -78,6 +78,7 @@ p {
 .nav .list {
     display: flex;
 }
+
 
 .li-nav:not(:last-child) {
     margin-right: 30px;
@@ -94,7 +95,9 @@ p {
         text-decoration: none;
 }
 .header-info{
+    display: flex;
     margin-left: auto;
+    align-items: center;
 }
 .link.tel {
 margin-right: 40px;
@@ -123,16 +126,32 @@ padding: 12px 20px}
     background-color: #FF6C00;
 }
 .back {}
-.forwar{}
+.forward{}
 
 /* main */
 /* hero */
+.box-social{
+    display: flex;
+    align-items: flex-start;
+}
+.section.hero {
+padding: 0;
+}
 .container.hero {
-    
+    padding-top: 185px;
+    padding-bottom: 210px;
     background-image: url(../images/hero.jpg);
     background-repeat: no-repeat;
     background-size: 1070px 680px;
-}
+    background-position: right;
+
+    }
+.list.social {
+       display: flex;
+      transform: rotate(-90deg);
+     margin: 0;
+     padding: 0;
+    }
 .social {
     margin-right: 40px;
 }
@@ -142,12 +161,12 @@ font-weight: 600;
     font-size: 11px;
     line-height: 1.3636;
         color: var(--title-text-color);
-    transform: rotate(-90deg);
-    text-decoration: none;
+        text-decoration: none;
 }
 .link-social:hover, .link-social:focus {
     color: var(--accent-color-orange);
 }
+
 .span-light {
     font-weight: 600;
         font-size: 11px;
@@ -165,20 +184,25 @@ h1.title-light  {
                letter-spacing: 0.05em;
                color: var(--accent-color-white)
 }
-
 .text-light {
     font-size: 18px;
-        line-height: 1.6667;
-        color: var(--accent-color-grey);
+    line-height: 1.6667;
+    color: var(--accent-color-grey);
 }
-
+.text-light.hero {
+  
+}
+.back-forward {
+  }
 /*  best barbershop*/
 .container.best {display: flex;}
 .list.best {
     display: flex;
-    margin-right: 30px;
+ }
+.li-best:not(:last-child) { margin-right: 30px;}
+.best-box {
+    margin-left: 30px;
 }
-.li-best { margin-right: 30px;}
 
 .span-dark {
     font-weight: 600;
