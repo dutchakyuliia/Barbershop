@@ -185,14 +185,26 @@ button {
   color: var(--accent-color-orange);
 }
 
-.span-light {
-  display: block;
+.uptitle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
   color: var(--span-light);
   margin-bottom: 20px;
+}
+.uptitle::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: currentColor;
+
+}
+.uptitle-light {
+  color: var(--span-light);
 }
 
 h1.title-light {
@@ -256,14 +268,8 @@ h1.title-light {
   margin-left: 30px;
 }
 
-.span-dark {
-  display: block;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
+.uptitle-dark {
   color: var(--title-text-color);
-  margin-bottom: 20px;
 }
 
 .title-dark {
