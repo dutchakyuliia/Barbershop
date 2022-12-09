@@ -1,0 +1,21 @@
+@import "./utils/variables";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+
+@import "./components/common/reset";
+@import "./components/common/global";
+
+
+
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/prices";
+@import "./components/benefits";
+@import "./components/barbers";
+@import "./components/gallery";
+@import "./components/online";
+@import "./components/contacts";
+@import "./components/footer";
+
+@import "./components/backdrop";
