@@ -1,0 +1,34 @@
+.navigation {
+}
+
+.menu {
+  @include max-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  @include tablet {
+  }
+
+  @include desktop {
+  }
+}
+
+.menu__item {
+}
+
+.menu__link {
+  @include font(600, 18px, 1.39, 0.1em);
+  color: var(--title-text-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color-orange);
+  }
+  @include max-mobile {
+  }
+  @include tablet {
+  }
+  @include desktop {
+  }
+}

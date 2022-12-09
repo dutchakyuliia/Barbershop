@@ -7,23 +7,47 @@
 .header__logo {
 }
 
-.navigation {
+.header__wrap {
+    @include max-mobile {
+        display: none;
+    }
+    
+        @include tablet {
+            display: block;
+        }
 }
-
 .header__navigation {
 }
 
-.menu {
-}
+.menu__header {
 
-.menu__item {
-}
-
-.menu__link {
 }
 
 .header__contact {
 }
 
 .header__button {
+}
+
+.menu-mobile {
+    @include max-mobile {}
+    
+        @include tablet {
+            display: none;
+        }
+    
+
+}
+
+.menu-mobile__navigation {
+}
+
+
+.menu-mobile__contact {
+
+}
+.menu-mobile__button {
+
+}
+.soc-list__mobile-menu {
 }
