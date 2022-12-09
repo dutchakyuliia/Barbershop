@@ -1,0 +1,44 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    background-color: var(--backgroud-color);
+}
+
+
+.container {
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+
+  @include mobile {
+    max-width: 448px;
+  }
+  @include tablet {
+    max-width: 720px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

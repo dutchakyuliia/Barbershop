@@ -2,20 +2,23 @@
 @import "./utils/placeholders";
 @import "./utils/mixins";
 
-@import "./components/common/reset";
-@import "./components/common/global";
+@import "./base/reset";
+@import "./base/global";
 
 
-
-@import "./components/header";
-@import "./components/hero";
-@import "./components/about";
-@import "./components/prices";
-@import "./components/benefits";
-@import "./components/barbers";
-@import "./components/gallery";
-@import "./components/online";
-@import "./components/contacts";
-@import "./components/footer";
-
+@import "./components/logo";
+@import "./components/button";
 @import "./components/backdrop";
+
+
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/about";
+@import "./layouts/prices";
+@import "./layouts/benefits";
+@import "./layouts/barbers";
+@import "./layouts/gallery";
+@import "./layouts/online";
+@import "./layouts/contacts";
+@import "./layouts/footer";
+
