@@ -1,0 +1,22 @@
+.uptitle {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    @include font(600, 11px, 1.36, 0.1em);
+    @include tablet {
+    }
+&::before {
+content: "";
+width: 60px;
+height: 1px;
+background-color: currentColor;
+margin-right: 20px;
+}
+}
+.uptitle--light {
+color: $uptitle-light;
+}
+
+.uptitle--dark {
+color: $color-black;
+}

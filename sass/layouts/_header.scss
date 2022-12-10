@@ -1,7 +1,18 @@
 .header {
+   z-index: 3;
+    @include max-mobile {
+        padding: 40px 0;
+        position: absolute;
+    
+        width: 100%;
+    }
 }
 
 .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
 }
 
 .header__logo {
@@ -30,24 +41,59 @@
 }
 
 .menu-mobile {
-    @include max-mobile {}
+    position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 337px;
+        height: 100vh;
+        background-color: $backgroud-color;
+        padding-top: 118px;
+        padding-bottom: 118px;
+        >.container {
+            height: 100%;
+        }
     
         @include tablet {
             display: none;
         }
-    
-
+ 
 }
-
+.btn-menu {
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+background-color: transparent;
+border: none;
+ @include tablet {
+    display: none;
+ }
+}
+.btn-menu--open {
+   }
+.btn-menu--close {
+ position: absolute;
+    top: 48px;
+    right: 31px;   
+}
+.btn-close-icon {
+fill: currentColor;
+}
 .menu-mobile__navigation {
+   margin-bottom: 64px;
 }
 
 
 .menu-mobile__contact {
-
+    @include font(600, 18px, 1.39, 0.1em);
+    text-transform: uppercase;
+    color: $color-black;
+    margin-bottom: 24px;
 }
 .menu-mobile__button {
-
+min-width: 194px;
+margin-bottom: 64px;
 }
 .soc-list__mobile-menu {
 }

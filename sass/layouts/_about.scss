@@ -4,28 +4,35 @@
 
 .about__container {}
 
-.picture-list {}
+.picture-list {
+    @include max-mobile {
+        display: none;
+    }
+}
 
 .picture-list__item {}
 
 .about__wrap {}
 
-.about__uptitle {}
+.about__uptitle {
+    margin-bottom: 20px;
+}
 
-.uptitle--dark {}
 
-.uptitle {}
 
-.section-title {}
+.about__title {
+    margin-bottom: 20px;}
 
-.about__title {}
+.about__subtitle {
+    @include font(400, 16px, 26/16, 0.02em);
+    color: $primary-text-color;
+    margin-bottom: 20px;
+}
 
-.about__subtitle {}
-
-.about__text {}
+.about__text {
+    @include font(400, 14px, 26/14, 0.02em);
+        color: $primary-text-color;
+    margin-bottom: 40px;
+}
 
 .about__button {}
-
-.button {}
-
-.button--dark {}

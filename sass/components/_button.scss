@@ -1,5 +1,23 @@
 .button {
-    
+display: block;
+min-width: 160px;
+    min-height: 40px;
+    padding: 12px 20px;
+    font-family: inherit;
+    text-transform: uppercase;
+    @include font(600, 12px, 1.33, 0.09em);
+    color: $color-white;
+     background-color: transparent;
+     border: 1px solid $color-orange;
+    border-radius: 25px;
+        
 }
 
-.button--light {}
+
+.button--light {
+    color: $color-black;
+}
+
+.button--dark {
+color: $color-black;
+}

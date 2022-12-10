@@ -19,9 +19,16 @@
     <header class="header">
       <div class="container header__container">
         <a class="logo header__logo" href="">
-          <img src="./images/logo.svg" alt="logo"
-        /></a>
-      <div class="header__wrap">
+          <picture>
+            <source srcset="./images/logo.svg" media="(min-width: 768px)" />
+            <source
+              srcset="./images/logo-light.svg"
+              media="(max-width: 767px)"
+            />
+            <img src="./images/logo-light.svg" alt="logo" width="69" height="56"
+          </picture>
+        </a>
+        <div class="header__wrap">
           <nav class="navigation header__navigation">
             <ul class="menu menu__header">
               <li class="menu__item">
@@ -44,56 +51,77 @@
           <button class="button header__button button--dark" type="button">
             Online-booking
           </button>
+        </div>
+        <button class="btn-menu btn-menu--open" type="button" data-menu-open>
+          <svg class="btn-open-icon" width="40" height="40">
+            <use href="./images/social.icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
-        <div class="menu-mobile">
+      <div class="menu-mobile is-hidden" data-menu>
+        <div class="container">
+          <button
+            class="btn-menu btn-menu--close"
+            type="button"
+            data-menu-close
+          >
+            <svg class="btn-close-icon" width="40" height="40">
+              <use href="./images/social.icons.svg#icon-close"></use>
+            </svg>
+          </button>
           <nav class="navigation menu-mobile__navigation">
-          <ul class="menu menu-mobile__menu">
-            <li class="menu__item">
-              <a class="menu__link" href="./index.html"> About</a>
+            <ul class="menu menu-mobile__menu">
+              <li class="menu__item">
+                <a class="menu__link" href="#about"> About</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#prices">Services and prices</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#barbers"> Barbers</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#contacts">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+
+          <a class="menu-mobile__contact" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
+          <button
+            class="button menu-mobile__button button--light"
+            type="button"
+          >
+            Online-booking
+          </button>
+          <ul class="soc-list soc-list__mobile-menu">
+            <li class="soc-list__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="soc-list__link"
+                >Instagram</a
+              >
             </li>
-            <li class="menu__item">
-              <a class="menu__link" href="">Services and prices</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href=""> Barbers</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="">Contacts</a>
+            <li class="soc-list__item">
+              <a
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+                class="soc-list__link"
+                >Youtube</a
+              >
             </li>
           </ul>
-        </nav>
-        <a class="menu-mobile__contact" href="tel:+380441111111"
-          >+38 044 111 11 11</a
-        >
-        <button class="button menu-mobile__button button--light" type="button">
-          Online-booking
-        </button>
-         <ul class="soc-list soc-list__mobile-menu">
-              <li class="soc-list__item">
-                <a
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="soc-list__link "
-                  >Instagram</a
-                >
-              </li>
-              <li class="soc-list__item">
-                <a
-                  href=""
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="soc-list__link "
-                  >Youtube</a
-                >
-              </li>
         </div>
       </div>
     </header>
     <main>
       <section class="hero">
         <div class="container hero__container">
-          <div class="soc">
+          <div class="soc soc__hero">
             <ul class="soc-list">
               <li class="soc-list__item">
                 <a
@@ -131,7 +159,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section class="section about" id="about">
         <div class="container about__container">
           <ul class="picture-list">
             <li class="picture-list__item">
@@ -173,14 +201,14 @@
           </div>
         </div>
       </section>
-      <section class="prices">
+      <section class="section prices" id="prices">
         <div class="container prices__container">
           <p class="prices__uptitle uptitle--light uptitle">
             Spend your time with the best masters
           </p>
           <h2 class="section-title prices__title">Services and prices</h2>
           <div class="prices__wrap">
-            <ul class="table-list">
+            <ul class="table-list table-list--first">
               <li class="table-list__item">
                 <p class="table-list__text">Men’s haircut</p>
                 <span class="table-list__text">from 300 uah.</span>
@@ -201,20 +229,20 @@
             </ul>
 
             <ul class="table-list">
-              <li class="prices-item">
+              <li class="table-list__item">
                 <p class="table-list__text">Men’s haircut</p>
                 <span class="table-list__text">from 300 uah.</span>
               </li>
 
-              <li class="prices-item">
+              <li class="table-list__item">
                 <p class="table-list__text">Beard trim</p>
                 <span class="table-list__text">from 300 uah.</span>
               </li>
-              <li class="prices-item">
+              <li class="table-list__item">
                 <p class="table-list__text">Mustache trim</p>
                 <span class="table-list__text">from 200 uah.</span>
               </li>
-              <li class="prices-item">
+              <li class="table-list__item">
                 <p class="table-list__text">Straight razor shave</p>
                 <span class="table-list__text">from 200 uah.</span>
               </li>
@@ -225,7 +253,7 @@
           </button>
         </div>
       </section>
-      <section class="benefits">
+      <section class="section benefits">
         <div class="container benefits__container">
           <ul class="benefits-list">
             <li class="benefits-list__item">
@@ -263,7 +291,7 @@
           </div>
         </div>
       </section>
-      <section class="barbers">
+      <section class="section barbers" id="barbers">
         <div class="container barbers__container">
           <p class="barbers__uptitle uptitle--dark uptitle">
             For true enjoyers of the atmosphere
@@ -309,7 +337,7 @@
           </ul>
         </div>
       </section>
-      <section class="gallery">
+      <section class="section gallery">
         <div class="container gallery__container">
           <p class="gallery__uptitle uptitle--dark uptitle">
             In Latin, "barba" means "beard"
@@ -352,7 +380,7 @@
         </div>
       </section>
       <div class="container">
-        <section class="online">
+        <section class="section online">
           <h2 class="online__title section-title">Online-booking</h2>
           <form class="online__form">
             <div class="online__wrap">
@@ -387,7 +415,7 @@
             <button type="submit" class="button online__button">Send</button>
           </form>
         </section>
-        <section class="contacts">
+        <section class="section contacts" id="contacts">
           <h2 class="contacts__title section-title">Contacts</h2>
           <address class="contacts__address">
             <ul class="contacts__list">
@@ -428,5 +456,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

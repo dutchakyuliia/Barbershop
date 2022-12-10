@@ -20,10 +20,10 @@
 
 .menu__link {
   @include font(600, 18px, 1.39, 0.1em);
-  color: var(--title-text-color);
+  color: $title-text-color;
   &:hover,
   &:focus {
-    color: var(--accent-color-orange);
+    color: $color-orange
   }
   @include max-mobile {
   }

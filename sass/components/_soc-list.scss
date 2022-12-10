@@ -1,5 +1,34 @@
-.soc-list {}
+.soc-list {position: relative;
+    display: flex;
+    align-items: center;
+ @include max-mobile {
+flex-direction: column;
+gap: 24px;
+ }
 
-.soc-list__item {}
+ &::before {position: absolute;
+    top: 9px;
+    left: 0;
+    width: 60px;
+    height: 1px;
+    background-color: $color-black;
+    content: "";
+ }
+}
 
-.soc-list__link {}
+.soc-list__item {
+    
+    
+   
+}
+
+.soc-list__link {
+    @include font(600, 14px, 1.36, 0.2em);
+    @include max-mobile {
+     color: $color-black;   
+    }
+         &:hover,
+         &:focus {
+             color: $color-orange
+         }
+}
