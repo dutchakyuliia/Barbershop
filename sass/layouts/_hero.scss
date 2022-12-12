@@ -37,14 +37,20 @@
 }
 
 .hero__title {
-    @include font(700, 48px, 1.17, 0.05em);
+    @include font(700, 40px, calc(44/40), 0.05em);
 color: $color-white;
 margin-bottom: 20px;
+@include mobile {
+    @include font(700, 48px, calc(56/48), 0.05em);
+}
 }
 
 .hero__text {
-    @include font(400, 16px, 1.62, 0.02em);
+    @include font(400, 12px, calc(18/12), 0.02em);
     color: $color-grey;
+    @include mobile {
+        @include font(400, 16px, calc(26/16), 0.02em);
+    }
 }
 
 .soc__hero {

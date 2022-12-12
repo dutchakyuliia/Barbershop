@@ -1,11 +1,11 @@
 .prices {
     background-color: #111319;
-    background-image:url(../images/prices-mob-1x.jpg), linear-gradient(180deg, #111319, #111319) ;
+    background-image:url(../images/prices-mob-min.png) ;
         background-repeat: no-repeat;
         background-size: cover;
     
         @include retina {
-            background-image: url(../images/prices-mob-2x.jpg), linear-gradient(180deg, #111319, #111319) ;
+            background-image: url(../images/prices-mob-2x-min.png);
         }
     
     
@@ -42,15 +42,28 @@
 }
 .table-list__item {
     display: flex;
-justify-content: space-between;}
-
-.table-list__text {
-    @include font(400, 14px, 20/14, 0.02em);
-
-        color: $color-grey;
+justify-content: space-between;
+align-items: baseline;
+    gap: 4px;
+&::before {
+    content: "";
+min-width: 8px;
+    height: 1px;
+    flex-grow: 1;
+    background-color: rgba(157, 164, 189, 0.12);
+}
 }
 
-.prices-item {}
+.table-list__text {
+    @include font(400, 10px, calc(16/10), 0.02em);
+        color: $color-grey;
+        &:first-child {
+                order: -1;
+            }
+            @include mobile {
+                @include font(400, 14px, calc(20/14), 0.02em);
+            }
+}
 
 .prices__button {
     margin: 0 auto;

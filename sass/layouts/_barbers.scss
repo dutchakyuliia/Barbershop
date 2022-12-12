@@ -1,25 +1,69 @@
-.barbers {}
+.barbers {
+  background-color: #f7f7f7;
+}
 
-.container {}
+.barbers__container {
+}
 
-.barbers__container {}
+.barbers__uptitle {
+  margin-bottom: 20px;
+}
 
-.barbers__uptitle {}
+.barbers__title {
+  margin-bottom: 44px;
+}
 
-.uptitle--dark {}
+.barbers__list {
+}
 
-.uptitle {}
+.barbers__item {
 
-.barbers__title {}
+  @include max-mobile {
+    &:not(:last-child) {
+      margin-bottom: 64px;
+    }
+  }
+}
 
-.section-title {}
+.barbers__info {
+  margin-top: 30px;
+}
 
-.barbers__list {}
+.barbers__person-title {
+  text-align: center;
+  margin-bottom: 8px;
+  @include font(400, 18px, calc(25 / 18), 0.02em);
+  color: $color-black;
+}
 
-.barbers__item {}
+.barbers__type {
+  text-align: center;
+  margin-bottom: 30px;
+  @include font(400, 14px, calc(19 / 14), 0.02em);
+  color: $color-orange;
+}
 
-.barbers__info {}
+.social {
+    display: flex;
+gap: 10px;
+align-items: center;
+justify-content: center;
+}
 
-.barbers__person-title {}
-
-.barbers__type {}
+.social__link {
+    display: block;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $color-white;
+color: $color-black;
+    &:hover, &:focus {
+        color: $color-orange;
+    }
+}
+.social__icon {
+    color: currentColor;
+}

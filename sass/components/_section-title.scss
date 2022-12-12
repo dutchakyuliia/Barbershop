@@ -1,8 +1,11 @@
 .section-title {
 font-family: 'Raleway', sans-serif;
-   @include font(700, 28px, 33/28, 0.05em);
+   @include font(700, 24px, calc(32/24), 0.05em);
     color: $color-black;
+    @include mobile {
+        @include font(700, 40px, calc(47/40), 0.05em);
+    }
     @include desktop {
-        @include font(700, 42px, 49/42, 0.05em);
+        @include font(700, 42px, calc(49/42), 0.05em);
     }
 }

@@ -46,7 +46,7 @@ body {
 }
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 448px;
+    max-width: 480px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -167,7 +167,7 @@ body {
 }
 
 .button--light {
-  color: #303030;
+  color: #ffffff;
 }
 
 .button--dark {
@@ -205,9 +205,17 @@ body {
           align-items: center;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
+  font-size: 7px;
+  line-height: 1.4285714286;
   letter-spacing: 0.1em;
+}
+@media screen and (min-width: 480px) {
+  .uptitle {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.3636363636;
+    letter-spacing: 0.1em;
+  }
 }
 .uptitle::before {
   content: "";
@@ -228,10 +236,18 @@ body {
 .section-title {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 28px;
-  line-height: 1.1785714286;
+  font-size: 24px;
+  line-height: 1.3333333333;
   letter-spacing: 0.05em;
   color: #303030;
+}
+@media screen and (min-width: 480px) {
+  .section-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.05em;
+  }
 }
 @media screen and (min-width: 1200px) {
   .section-title {
@@ -387,19 +403,35 @@ body {
 
 .hero__title {
   font-weight: 700;
-  font-size: 48px;
-  line-height: 1.17;
+  font-size: 40px;
+  line-height: 1.1;
   letter-spacing: 0.05em;
   color: #ffffff;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 480px) {
+  .hero__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.05em;
+  }
+}
 
 .hero__text {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.62;
+  font-size: 12px;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+@media screen and (min-width: 480px) {
+  .hero__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.625;
+    letter-spacing: 0.02em;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -424,33 +456,47 @@ body {
 
 .about__subtitle {
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.625;
+  font-size: 12px;
+  line-height: 1.5833333333;
   letter-spacing: 0.02em;
   color: #555555;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 480px) {
+  .about__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.625;
+    letter-spacing: 0.02em;
+  }
+}
 
 .about__text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.8571428571;
+  font-size: 10px;
+  line-height: 1.6;
   letter-spacing: 0.02em;
   color: #555555;
   margin-bottom: 40px;
 }
+@media screen and (min-width: 480px) {
+  .about__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.625;
+    letter-spacing: 0.02em;
+  }
+}
 
 .prices {
   background-color: #111319;
-  background-image: url(../images/prices-mob-1x.jpg), -webkit-gradient(linear, left top, left bottom, from(#111319), to(#111319));
-  background-image: url(../images/prices-mob-1x.jpg), linear-gradient(180deg, #111319, #111319);
+  background-image: url(../images/prices-mob-min.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .prices {
-    background-image: url(../images/prices-mob-2x.jpg), -webkit-gradient(linear, left top, left bottom, from(#111319), to(#111319));
-    background-image: url(../images/prices-mob-2x.jpg), linear-gradient(180deg, #111319, #111319);
+    background-image: url(../images/prices-mob-2x-min.png);
   }
 }
 
@@ -494,16 +540,213 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 4px;
+}
+.table-list__item::before {
+  content: "";
+  min-width: 8px;
+  height: 1px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: rgba(157, 164, 189, 0.12);
 }
 
 .table-list__text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.4285714286;
+  font-size: 10px;
+  line-height: 1.6;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+.table-list__text:first-child {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+@media screen and (min-width: 480px) {
+  .table-list__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4285714286;
+    letter-spacing: 0.02em;
+  }
 }
 
 .prices__button {
   margin: 0 auto;
+}
+
+.benefits__uptitle {
+  margin-bottom: 20px;
+}
+
+.benefits__title {
+  margin-bottom: 20px;
+}
+
+.benefits__text {
+  margin-bottom: 44px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8571428571;
+  letter-spacing: 0.02em;
+}
+@media screen and (min-width: 480px) {
+  .benefits__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6666666667;
+    letter-spacing: 0.02em;
+  }
+}
+
+.benefits-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (max-width: 479px) {
+  .benefits-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 30px;
+  }
+}
+
+.benefits-list__item {
+  text-align: center;
+  background-color: #F7F7F7;
+  width: 193px;
+  height: 133px;
+  padding: 20px 35px;
+}
+@media screen and (min-width: 480px) {
+  .benefits-list__item:nth-child(2) {
+    margin-top: 35px;
+    margin-left: 30px;
+  }
+  .benefits-list__item:nth-child(4) {
+    margin-top: 35px;
+    margin-left: 30px;
+  }
+}
+
+.benefits-list__numbers {
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.3571428571;
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+@media screen and (min-width: 480px) {
+  .benefits-list__numbers {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.3571428571;
+    letter-spacing: 0.05em;
+  }
+}
+
+.benefits-list__plus {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.375;
+  letter-spacing: 0.02em;
+  color: #ff6c00;
+}
+
+.benefits-list__text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.3636363636;
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+
+.barbers {
+  background-color: #f7f7f7;
+}
+
+.barbers__uptitle {
+  margin-bottom: 20px;
+}
+
+.barbers__title {
+  margin-bottom: 44px;
+}
+
+@media screen and (max-width: 767px) {
+  .barbers__item:not(:last-child) {
+    margin-bottom: 64px;
+  }
+}
+
+.barbers__info {
+  margin-top: 30px;
+}
+
+.barbers__person-title {
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3888888889;
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+
+.barbers__type {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3571428571;
+  letter-spacing: 0.02em;
+  color: #ff6c00;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social__link {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #303030;
+}
+.social__link:hover, .social__link:focus {
+  color: #ff6c00;
+}
+
+.social__icon {
+  color: currentColor;
 }/*# sourceMappingURL=main.css.map */

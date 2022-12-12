@@ -1,27 +1,74 @@
-.benefits {}
+.benefits {
+}
 
-.container {}
+.benefits__container {
+}
 
-.benefits__container {}
+.benefits__uptitle {
+    margin-bottom: 20px;
+}
 
-.benefits-list {}
+.benefits__title {
+    margin-bottom: 20px;
+}
 
-.benefits-list__item {}
+.benefits__text {
+    margin-bottom: 44px;
+    @include font(400, 14px, calc(26/14), 0.02em);
+    @include mobile {
+        @include font(400, 18px, calc(30/18), 0.02em);
+    }
+}
 
-.benefits-list__numbers {}
+.benefits__wrap {
+}
 
-.benefits-list__plus {}
+.benefits-list {
+       display: flex;
+    flex-wrap: wrap; 
+    @media screen and (max-width: 479px) {
+    justify-content: center; 
+    gap: 30px;   
+    }
+    
+}
 
-.benefits-list__text {}
+.benefits-list__item {
+   text-align: center;
+    background-color: #F7F7F7; 
+    width: 193px;
+    height: 133px;
+    padding: 20px 35px;
+   
+@include mobile {
+    &:nth-child(2) {
+        margin-top: 35px;
+        margin-left: 30px;
+    }
+&:nth-child(4) {
+    margin-top: 35px;
+        margin-left: 30px;
+}
+} }
 
-.benefits__uptitle {}
+.benefits-list__numbers {
 
-.uptitle--dark {}
+    margin-bottom: 6px;
+    @include font(700, 42px, calc(57/42), 0.05em);
+        color: $color-black;
+    
+        @include mobile {
+            @include font(700, 42px, calc(57/42), 0.05em);
+        }
+}
 
-.uptitle {}
+.benefits-list__plus {
+   
+@include font(600, 16px, calc(22/16), 0.02em);
+    color: $color-orange;
+}
 
-.benefits__title {}
-
-.section-title {}
-
-.benefits__text {}
+.benefits-list__text {
+@include font(600, 11px, calc(15/11), 0.02em);
+color: $color-black; 
+}

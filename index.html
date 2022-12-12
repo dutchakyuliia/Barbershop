@@ -230,20 +230,20 @@
 
             <ul class="table-list">
               <li class="table-list__item">
-                <p class="table-list__text">Men’s haircut</p>
-                <span class="table-list__text">from 300 uah.</span>
+                <p class="table-list__text">Trainee’s haircut</p>
+                <span class="table-list__text">from 50 uah.</span>
               </li>
 
               <li class="table-list__item">
-                <p class="table-list__text">Beard trim</p>
-                <span class="table-list__text">from 300 uah.</span>
-              </li>
-              <li class="table-list__item">
-                <p class="table-list__text">Mustache trim</p>
+                <p class="table-list__text">Haircut under the nozzle</p>
                 <span class="table-list__text">from 200 uah.</span>
               </li>
               <li class="table-list__item">
-                <p class="table-list__text">Straight razor shave</p>
+                <p class="table-list__text">Children’s haircut (0-12 y.o.)</p>
+                <span class="table-list__text">from 300 uah.</span>
+              </li>
+              <li class="table-list__item">
+                <p class="table-list__text">Camouflage of grey hair</p>
                 <span class="table-list__text">from 200 uah.</span>
               </li>
             </ul>
@@ -255,39 +255,37 @@
       </section>
       <section class="section benefits">
         <div class="container benefits__container">
-          <ul class="benefits-list">
-            <li class="benefits-list__item">
-              <span class="benefits-list__numbers">600</span>
-              <sup class="benefits-list__plus">+</sup>
-              <p class="benefits-list__text">Satisfied customers per day</p>
-            </li>
-            <li class="benefits-list__item">
-              <span class="benefits-list__numbers">50</span
-              ><sup class="benefits-list__plus">+</sup>
-              <p class="benefits-list__text">Awards for excellent service</p>
-            </li>
-            <li class="benefits-list__item">
-              <span class="benefits-list__numbers">20</span
-              ><sup class="benefits-list__plus">+</sup>
-              <p class="benefits-list__text">Kyiv’s best barbers</p>
-            </li>
-            <li class="benefits-list__item">
-              <span class="benefits-list__numbers">100</span
-              ><sup class="benefits-list__plus">+</sup>
-              <p class="benefits-list__text">Gifts for regular customers</p>
-            </li>
-          </ul>
-          <div>
-            <p class="benefits__uptitle uptitle--dark uptitle">
-              Old traditional school
-            </p>
-            <h2 class="benefits__title section-title">
-              ¿Why people come to us?
-            </h2>
-            <p class="benefits__text">
-              Only good things are said about us. But it's better to see and
-              feel 1 time than read 10 times.
-            </p>
+          <p class="benefits__uptitle uptitle--dark uptitle">
+            Old traditional school
+          </p>
+          <h2 class="benefits__title section-title">¿Why people come to us?</h2>
+          <p class="benefits__text">
+            Only good things are said about us. But it's better to see and feel
+            1 time than read 10 times.
+          </p>
+          <div class="benefits__wrap">
+            <ul class="benefits-list">
+              <li class="benefits-list__item">
+                <span class="benefits-list__numbers">600</span>
+                <sup class="benefits-list__plus">+</sup>
+                <p class="benefits-list__text">Satisfied customers per day</p>
+              </li>
+              <li class="benefits-list__item">
+                <span class="benefits-list__numbers">50</span
+                ><sup class="benefits-list__plus">+</sup>
+                <p class="benefits-list__text">Awards for excellent service</p>
+              </li>
+              <li class="benefits-list__item">
+                <span class="benefits-list__numbers">20</span
+                ><sup class="benefits-list__plus">+</sup>
+                <p class="benefits-list__text">Kyiv’s best barbers</p>
+              </li>
+              <li class="benefits-list__item">
+                <span class="benefits-list__numbers">100</span
+                ><sup class="benefits-list__plus">+</sup>
+                <p class="benefits-list__text">Gifts for regular customers</p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -299,39 +297,194 @@
           <h2 class="barbers__title section-title">Our barbers</h2>
           <ul class="barbers__list">
             <li class="barbers__item">
-              <img
-                src="./images/barber-1.jpg"
-                alt="John Smith"
-                width="370px"
-                height="346px"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/barbers/barber-1-desk-min.jpg    1x,
+                    ./images/barbers/barber-1-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbers/barber-1-tab-min.jpg    1x,
+                    ./images/barbers/barber-1-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbers/barber-1-mob-min.jpg    1x,
+                    ./images/barbers/barber-1-mob-2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/barbers/barber-1-mob-min.jpg"
+                  alt="John Smith "
+                />
+              </picture>
               <div class="barbers__info">
                 <h3 class="barbers__person-title">John Smith</h3>
                 <p class="barbers__type">Extreme Barber</p>
+                <ul class="social">
+                  <li class="social__item">
+                    <a class="social__link">
+                      <svg svg class="social__icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link">
+                      <svg svg class="social__icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link">
+                      <svg svg class="social__icon" width="20" height="20">
+                        <use use href="./images/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link">
+                      <svg svg class="social__icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="barbers__item">
-              <img
-                src="./images/barber-2.jpg"
-                alt="Michele Doe"
-                width="370px"
-                height="346px"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/barbers/barber-2-desk-min.jpg    1x,
+                    ./images/barbers/barber-2-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbers/barber-2-tab-min.jpg    1x,
+                    ./images/barbers/barber-2-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbers/barber-2-mob-min.jpg    1x,
+                    ./images/barbers/barber-2-mob-2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/barbers/barber-2-mob-min.jpg"
+                  alt="Michele Doe "
+                />
+              </picture>
+
               <div class="barbers__info">
                 <h3 class="barbers__person-title">Michele Doe</h3>
                 <p class="barbers__type">Extreme Barber</p>
+                <ul class="social">
+                  <li class="social__item">
+                    <a class="social__link">
+                      <svg svg class="social__icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link">
+                      <svg svg class="social__icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link">
+                      <svg svg class="social__icon" width="20" height="20">
+                        <use use href="./images/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link">
+                      <svg svg class="social__icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </li>
             <li class="barbers__item">
-              <img
-                src="./images/barber-3.jpg"
-                alt="Alan Black"
-                width="370px"
-                height="346px"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/barbers/barber-3-desk-min.jpg    1x,
+                    ./images/barbers/barber-3-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbers/barber-3-tab-min.jpg    1x,
+                    ./images/barbers/barber-3-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/barbers/barber-3-mob-min.jpg    1x,
+                    ./images/barbers/barber-3-mob-2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/barbers/barber-3-mob-min.jpg"
+                  alt="Alan Black "
+                />
+              </picture>
+
               <div class="barbers__info">
                 <h3 class="barbers__person-title">Alan Black</h3>
                 <p class="barbers__type">Extreme Barber</p>
+                <ul class="social">
+                  <li class="social__item">
+                    <a class="social__link">
+                      <svg svg class="social__icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link">
+                      <svg svg class="social__icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link">
+                      <svg svg class="social__icon" width="20" height="20">
+                        <use use href="./images/sprite.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a class="social__link">
+                      <svg svg class="social__icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>

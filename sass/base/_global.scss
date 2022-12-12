@@ -14,7 +14,7 @@ body {
   outline: 2px solid red;
 
   @include mobile {
-    max-width: 448px;
+    max-width: 480px;
   }
      @include max-mobile {
        padding: 0 31px;

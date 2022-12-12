@@ -24,15 +24,21 @@
     margin-bottom: 20px;}
 
 .about__subtitle {
-    @include font(400, 16px, 26/16, 0.02em);
+    @include font(400, 12px, calc(19/12), 0.02em);
     color: $primary-text-color;
     margin-bottom: 20px;
+    @include mobile {
+        @include font(400, 16px, calc(26/16), 0.02em);
+    }
 }
 
 .about__text {
-    @include font(400, 14px, 26/14, 0.02em);
+    @include font(400, 10px, calc(16/10), 0.02em);
         color: $primary-text-color;
     margin-bottom: 40px;
+    @include mobile {
+            @include font(400, 16px, calc(26/16), 0.02em);
+        }
 }
 
 .about__button {}
