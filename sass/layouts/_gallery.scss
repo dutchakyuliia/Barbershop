@@ -1,17 +1,32 @@
 .gallery {}
 
-.container {}
 
 .gallery__container {}
 
-.gallery__uptitle {}
+.gallery__uptitle {
+    margin-bottom: 71px;
+    @include tablet {
+        margin-bottom: 44px;
+    }
+}
 
-.uptitle--dark {}
 
-.uptitle {}
+.gallery__list {
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
 
-.hidden {}
-
-.gallery__list {}
-
-.gallery__item {}
+.gallery__item {
+    @include max-mobile {
+     &:not(:last-child) {
+        margin-bottom: 30px;
+    }   
+    }
+    
+@include tablet {
+    flex-basis: calc((100% - 30px) / 2);
+}
+}

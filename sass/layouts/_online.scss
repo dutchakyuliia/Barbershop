@@ -1,21 +1,88 @@
-.online {}
+.online__name-tel-wrap {
+    @include tablet {
+        display: flex;
+        gap: 30px;
+    }
+}
+.online {
+}
 
-.online__title {}
+.online__title {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 44px;
+}
 
-.section-title {}
+
 
 .online__form {}
 
-.online__wrap {}
+.online__wrap {
+    position: relative;
+    margin-bottom: 44px;
+    
+    
+}
 
-.online__input {}
+.online__input {
+    width: 100%;
+    height: 24px;
+    background-color: transparent;
+    color: rgba(157, 164, 189, 0.4);
+    border: none;
+     border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+     padding-left: 54px;
+     &:focus-within {
+        outline: transparent;
+        color: $color-white;
+        border-bottom: 1px solid $color-white;
+        }
+        @include tablet {
+            min-width: 300px;
+        }
+     }
 
-.online__label {}
 
-.online__textarea-wrap {}
+.online__label {
+    position: absolute;
+        left: 0;
+    @include font(600, 11px, calc(15/11), 0.1em);
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.4);
+ & + .online-input:focus-within {
+    color: $color-white;
+}
+    
+}
 
-.online__text {}
+.online__textarea-wrap {
+    position: relative;
+    margin-bottom: 44px;
+}
 
-.button {}
+.online__text {
+    width: 100%;
+    height: 76px;
+        resize: none;
+        background-color: transparent;
+        color: rgba(157, 164, 189, 0.4);
+       
+        border: none;
+        border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+          
+            padding-left: 65px;
+            &:focus-within {
+                    outline: transparent; 
+                    color: $color-white;
+                      border-bottom: 1px solid $color-white;
+                }
+     
+}
 
-.online__button {}
+.online__button {
+    @include max-mobile {
+     margin: 0 auto;   
+    }
+    
+
+}

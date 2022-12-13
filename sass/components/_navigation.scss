@@ -23,12 +23,14 @@
   color: $title-text-color;
   &:hover,
   &:focus {
-    color: $color-orange
-  }
-  @include max-mobile {
+    color: $color-orange;
   }
   @include tablet {
+    
+    color: $color-white;
+    @include font(600, 12px, calc(16/12), 0.1em);
   }
   @include desktop {
+    padding: 52px 0;
   }
 }

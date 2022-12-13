@@ -5,7 +5,8 @@ font-family: 'Raleway', sans-serif;
     @include mobile {
         @include font(700, 40px, calc(47/40), 0.05em);
     }
-    @include desktop {
+         
+    @include tablet {
         @include font(700, 42px, calc(49/42), 0.05em);
     }
 }

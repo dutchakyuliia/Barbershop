@@ -7,11 +7,27 @@
         @include retina {
             background-image: url(../images/prices-mob-2x-min.png);
         }
+        @include tablet {
+            background-image: url(../images/prices-tab-min.png);
+            
+                @include retina {
+                    background-image: url(../images/prices-tab-2x-min.png);
+                }
+        }
+                                @include desktop {
+                                    background-image: url(../images/prices-desk-min.png);
+                
+                                    @include retina {
+                                        background-image: url(../images/prices-desk-2x-min.png);
+                                    }
+                                }
     
     
 }
 
-.prices__container {}
+.prices__container {
+    padding: 0;
+}
 
 .prices__uptitle {
     margin-bottom: 20px;
@@ -35,9 +51,8 @@
     gap: 20px;
 }
 .table-list--first {
-    @include max-mobile {
       margin-bottom: 20px;   
-    }
+    
    
 }
 .table-list__item {
@@ -63,6 +78,9 @@ min-width: 8px;
             @include mobile {
                 @include font(400, 14px, calc(20/14), 0.02em);
             }
+                         @include tablet{
+                             @include font(400, 18px, calc(30/18), 0.02em);
+                         }
 }
 
 .prices__button {

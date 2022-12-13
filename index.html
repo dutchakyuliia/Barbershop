@@ -32,25 +32,27 @@
           <nav class="navigation header__navigation">
             <ul class="menu menu__header">
               <li class="menu__item">
-                <a class="menu__link" href="./index.html"> About</a>
+                <a class="menu__link" href="#about"> About</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="">Services and prices</a>
+                <a class="menu__link" href="#prices">Services and prices</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href=""> Barbers</a>
+                <a class="menu__link" href="#barbers"> Barbers</a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="">Contacts</a>
+                <a class="menu__link" href="#contacts">Contacts</a>
               </li>
             </ul>
           </nav>
-          <a class="header__contact" href="tel:+380441111111"
-            >+38 044 111 11 11</a
-          >
-          <button class="button header__button button--dark" type="button">
-            Online-booking
-          </button>
+          <div class="header__contact-wrap">
+            <button class="button header__button button--light" type="button">
+              Online-booking
+            </button>
+            <a class="header__contact" href="tel:+380441111111"
+              >+38 044 111 11 11</a
+            >
+          </div>
         </div>
         <button class="btn-menu btn-menu--open" type="button" data-menu-open>
           <svg class="btn-open-icon" width="40" height="40">
@@ -89,10 +91,7 @@
           <a class="menu-mobile__contact" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button
-            class="button menu-mobile__button button--light"
-            type="button"
-          >
+          <button class="button menu-mobile__button button--dark" type="button">
             Online-booking
           </button>
           <ul class="soc-list soc-list__mobile-menu">
@@ -122,13 +121,13 @@
       <section class="hero">
         <div class="container hero__container">
           <div class="soc soc__hero">
-            <ul class="soc-list">
+            <ul class="soc-list soc-list__hero">
               <li class="soc-list__item">
                 <a
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="soc-list__link link"
+                  class="soc-list__link"
                   >Instagram</a
                 >
               </li>
@@ -137,7 +136,7 @@
                   href=""
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="soc-list__link link"
+                  class="soc-list__link"
                   >Youtube</a
                 >
               </li>
@@ -163,20 +162,50 @@
         <div class="container about__container">
           <ul class="picture-list">
             <li class="picture-list__item">
-              <img
-                src="./images/best-1.jpg"
-                alt="Shaving beard"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/about/about-1-desk-min.jpg    1x,
+                    ./images/about/about-1-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/about/about-1-tab-min.jpg    1x,
+                    ./images/about/about-1-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+
+                <img
+                  src="./images/about/about-1-tab-min.jpg"
+                  alt="Shaving beard"
+                />
+              </picture>
             </li>
             <li class="picture-list__item">
-              <img
-                src="./images/best-2.jpg"
-                alt="Making haircut"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/about/about-2-desk-min.jpg    1x,
+                    ./images/about/about-2-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/about/about-2-tab-min.jpg    1x,
+                    ./images/about/about-2-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+
+                <img
+                  src="./images/about/about-2-tab-min.jpg"
+                  alt="Making haircut"
+                />
+              </picture>
             </li>
           </ul>
           <div class="about__wrap">
@@ -329,29 +358,29 @@
                 <p class="barbers__type">Extreme Barber</p>
                 <ul class="social">
                   <li class="social__item">
-                    <a class="social__link">
-                      <svg svg class="social__icon" width="20" height="20">
+                    <a class="social__link" href="">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social__link">
-                      <svg svg class="social__icon" width="20" height="20">
+                    <a class="social__link" href="">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social__link">
-                      <svg svg class="social__icon" width="20" height="20">
-                        <use use href="./images/sprite.svg#icon-facebook"></use>
+                    <a class="social__link" href="">
+                      <svg class="social__icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social__link">
-                      <svg svg class="social__icon" width="20" height="20">
+                    <a class="social__link" href="">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -393,29 +422,29 @@
                 <p class="barbers__type">Extreme Barber</p>
                 <ul class="social">
                   <li class="social__item">
-                    <a class="social__link">
-                      <svg svg class="social__icon" width="20" height="20">
+                    <a class="social__link" href="">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social__link">
-                      <svg svg class="social__icon" width="20" height="20">
+                    <a class="social__link" href="">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social__link">
-                      <svg svg class="social__icon" width="20" height="20">
-                        <use use href="./images/sprite.svg#icon-facebook"></use>
+                    <a class="social__link" href="">
+                      <svg class="social__icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social__link">
-                      <svg svg class="social__icon" width="20" height="20">
+                    <a class="social__link" href="">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -457,29 +486,29 @@
                 <p class="barbers__type">Extreme Barber</p>
                 <ul class="social">
                   <li class="social__item">
-                    <a class="social__link">
-                      <svg svg class="social__icon" width="20" height="20">
+                    <a class="social__link" href="">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social__link">
-                      <svg svg class="social__icon" width="20" height="20">
+                    <a class="social__link" href="">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-twitter"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social__link">
-                      <svg svg class="social__icon" width="20" height="20">
-                        <use use href="./images/sprite.svg#icon-facebook"></use>
+                    <a class="social__link" href="">
+                      <svg class="social__icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-facebook"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="social__item">
-                    <a class="social__link">
-                      <svg svg class="social__icon" width="20" height="20">
+                    <a class="social__link" href="">
+                      <svg class="social__icon" width="20" height="20">
                         <use href="./images/sprite.svg#icon-linkedin"></use>
                       </svg>
                     </a>
@@ -498,103 +527,196 @@
           <h2 class="hidden">Portfolio</h2>
           <ul class="gallery__list">
             <li class="gallery__item">
-              <img
-                src="./images/work-1.jpg"
-                alt="beard"
-                width="270px"
-                height="360px"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/cards/card-1-desk-min.jpg    1x,
+                    ./images/cards/card-1-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/cards/card-1-tab-min.jpg    1x,
+                    ./images/cards/card-1-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/cards/card-1-mob-min.jpg    1x,
+                    ./images/cards/card-1-mob-2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/cards/card-1-mob-min.jpg" alt="beard " />
+              </picture>
             </li>
             <li class="gallery__item">
-              <img
-                src="./images/work-2.jpg"
-                alt="beard"
-                width="270px"
-                height="360px"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/cards/card-2-desk-min.jpg    1x,
+                    ./images/cards/card-2-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/cards/card-2-tab-min.jpg    1x,
+                    ./images/cards/card-2-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/cards/card-2-mob-min.jpg    1x,
+                    ./images/cards/card-2-mob-2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/cards/card-2-mob-min.jpg" alt="beard " />
+              </picture>
             </li>
             <li class="gallery__item">
-              <img
-                src="./images/work-3.jpg"
-                alt="beard"
-                width="270px"
-                height="360px"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/cards/card-3-desk-min.jpg    1x,
+                    ./images/cards/card-3-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/cards/card-3-tab-min.jpg    1x,
+                    ./images/cards/card-3-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/cards/card-3-mob-min.jpg    1x,
+                    ./images/cards/card-3-mob-2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/cards/card-3-mob-min.jpg" alt="beard " />
+              </picture>
             </li>
             <li class="gallery__item">
-              <img
-                src="./images/work-4.jpg"
-                alt="beard"
-                width="270px"
-                height="360px"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/cards/card-4-desk-min.jpg    1x,
+                    ./images/cards/card-4-desk-2x-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/cards/card-4-tab-min.jpg    1x,
+                    ./images/cards/card-4-tab-2x-min.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/cards/card-4-mob-min.jpg    1x,
+                    ./images/cards/card-4-mob-2x-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/cards/card-4-mob-min.jpg" alt="beard " />
+              </picture>
             </li>
           </ul>
         </div>
       </section>
-      <div class="container">
+      <div class="container online-contacts__container">
         <section class="section online">
           <h2 class="online__title section-title">Online-booking</h2>
           <form class="online__form">
-            <div class="online__wrap">
-              <input
-                type="text"
-                class="online__input"
-                name="online-name"
-                id="online-name"
-                placeholder=" "
-              />
-              <label for="online-name" class="online__label">Name*</label>
-            </div>
-            <div class="online__wrap">
-              <input
-                type="tel"
-                class="online__input"
-                name="online-tel"
-                id="online-tel"
-                placeholder=" "
-              />
-              <label for="online-tel" class="online__label">Phone*</label>
+            <div class="online__name-tel-wrap">
+              <div class="online__wrap">
+                <label for="online-name" class="online__label">Name*</label>
+                <input
+                  type="text"
+                  class="online__input"
+                  name="online-name"
+                  id="online-name"
+                  placeholder=" "
+                />
+              </div>
+              <div class="online__wrap">
+                <label for="online-tel" class="online__label">Phone*</label>
+                <input
+                  type="tel"
+                  class="online__input"
+                  name="online-tel"
+                  id="online-tel"
+                  placeholder=" "
+                />
+              </div>
             </div>
             <div class="online__textarea-wrap">
+              <label
+                for="online-mess"
+                class="online__label online__label--message"
+                >Message</label
+              >
               <textarea
                 name="online-mess"
                 id="online-mess"
                 class="online__text"
                 placeholder=" "
               ></textarea>
-              <label for="online-mess" class="online__label">Message</label>
             </div>
             <button type="submit" class="button online__button">Send</button>
           </form>
         </section>
         <section class="section contacts" id="contacts">
           <h2 class="contacts__title section-title">Contacts</h2>
-          <address class="contacts__address">
-            <ul class="contacts__list">
-              <li class="contacts__item">
-                <a
-                  class="contacts__link"
-                  href="https://goo.gl/maps/oKYZWMwzyQTYq2JNA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >st. Vasilkovaya, 7A Kiev, 08132</a
-                >
-              </li>
-              <li class="contacts__item">
-                <a class="contacts__link" href="tel:+380441111111"
-                  >+38 044 111 11 11</a
-                >
-              </li>
-              <li class="contacts__item">
-                <a class="contacts__link" href="mailto:barbershop@email.com"
-                  >barbershop@email.com</a
-                >
-              </li>
-            </ul>
-          </address>
-          <span class="contacts__schedule-title">Working hours</span>
-          <p class="contacts__schedule-text">Every day from 9:00 to 22:00</p>
+          <div class="contacts__wrap">
+            <address class="contacts__address">
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <svg class="contact__icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-place"></use>
+                  </svg>
+                  <a
+                    class="contacts__link contacts__link--place"
+                    href="https://goo.gl/maps/oKYZWMwzyQTYq2JNA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >st. Vasilkovaya, 7A Kiev, 08132</a
+                  >
+                </li>
+                <li class="contacts__item">
+                  <svg class="contact__icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-tel"></use>
+                  </svg>
+                  <a class="contacts__link" href="tel:+380441111111"
+                    >+38 044 111 11 11</a
+                  >
+                </li>
+                <li class="contacts__item">
+                  <svg class="contact__icon" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-mail"></use>
+                  </svg>
+                  <a class="contacts__link" href="mailto:barbershop@email.com"
+                    >barbershop@email.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <div class="contacts-schedule-wrap">
+              <span class="contacts__schedule-title">Working hours</span>
+              <p class="contacts__schedule-text">
+                Every day from 9:00 to 22:00
+              </p>
+            </div>
+          </div>
         </section>
       </div>
     </main>

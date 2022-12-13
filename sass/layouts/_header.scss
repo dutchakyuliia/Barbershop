@@ -1,21 +1,30 @@
 .header {
    z-index: 3;
+   position: absolute;
+        width: 100%;
     @include max-mobile {
         padding: 40px 0;
-        position: absolute;
-    
-        width: 100%;
+        
     }
+
 }
 
 .header__container {
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include desktop {
+        justify-content: flex-start;
+    }
    
 }
 
 .header__logo {
+    margin-right: 60px;
+    @include desktop {
+        margin-right: 131px;
+    }
 }
 
 .header__wrap {
@@ -25,21 +34,45 @@
     
         @include tablet {
             display: block;
+            display: flex;
+                align-items: center;
+
         }
 }
 .header__navigation {
+    display: flex;
+        align-items: center;
+        margin-right: 37px;
 }
 
 .menu__header {
-
+display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
-.header__contact {
-}
 
+.header__contact-wrap {
+  
+    @include desktop {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    margin-left: 254px;
+
+    }
+}
 .header__button {
+    @media screen and (max-width: 1199px) {
+     margin-top: 40px;
+    margin-bottom: 20px;   
+    }
+     
 }
-
+.header__contact {
+    @include font(600, 12px, calc(16/12), 0.1em);
+    color: $color-white;
+}
 .menu-mobile {
     position: fixed;
         top: 0;
@@ -94,6 +127,7 @@ fill: currentColor;
 .menu-mobile__button {
 min-width: 194px;
 margin-bottom: 64px;
+
 }
 .soc-list__mobile-menu {
 }

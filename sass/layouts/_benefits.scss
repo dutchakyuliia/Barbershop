@@ -10,6 +10,9 @@
 
 .benefits__title {
     margin-bottom: 20px;
+    @include tablet {
+        width: 449px;
+    }
 }
 
 .benefits__text {
@@ -18,9 +21,13 @@
     @include mobile {
         @include font(400, 18px, calc(30/18), 0.02em);
     }
+        @include tablet {
+            width: 500px;
+        }
 }
 
 .benefits__wrap {
+
 }
 
 .benefits-list {
@@ -30,6 +37,7 @@
     justify-content: center; 
     gap: 30px;   
     }
+    
     
 }
 
@@ -49,7 +57,11 @@
     margin-top: 35px;
         margin-left: 30px;
 }
-} }
+}
+@include tablet {
+    width: 210px;
+}
+}
 
 .benefits-list__numbers {
 

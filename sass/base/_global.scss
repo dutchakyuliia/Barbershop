@@ -7,11 +7,9 @@ body {
 
 
 .container {
-  max-width: 100%;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 100%;
   margin: 0 auto;
-  outline: 2px solid red;
+  outline: 2px solid palevioletred;
 
   @include mobile {
     max-width: 480px;
@@ -20,7 +18,8 @@ body {
        padding: 0 31px;
      }
   @include tablet {
-    max-width: 720px;
+    max-width: 690px;
+    padding: 0 39px;
   }
   @include desktop {
     max-width: 1200px;

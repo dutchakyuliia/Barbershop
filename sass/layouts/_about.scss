@@ -2,17 +2,37 @@
 
 .container {}
 
-.about__container {}
+.about__container {
+    @include tablet {
+        display: flex;
+        gap: 30px;
+    }
+}
 
 .picture-list {
     @include max-mobile {
         display: none;
     }
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    @include desktop {
+        display: flex;
+            flex-direction: row;
+            gap: 30px;
+    }
 }
 
 .picture-list__item {}
 
-.about__wrap {}
+.about__wrap {
+    max-width: 330px;
+    @include desktop {
+        max-width: 470px;
+    }
+}
 
 .about__uptitle {
     margin-bottom: 20px;
@@ -21,7 +41,11 @@
 
 
 .about__title {
-    margin-bottom: 20px;}
+    @include font(700, 28px, calc(33/28), 0.05em);
+    margin-bottom: 20px;
+@include desktop {
+    @include font(700, 42px, calc(49/42), 0.05em);
+}}
 
 .about__subtitle {
     @include font(400, 12px, calc(19/12), 0.02em);
@@ -30,6 +54,9 @@
     @include mobile {
         @include font(400, 16px, calc(26/16), 0.02em);
     }
+         @include tablet {
+             @include font(400, 18px, calc(30/18), 0.02em);
+         }
 }
 
 .about__text {
@@ -39,6 +66,14 @@
     @include mobile {
             @include font(400, 16px, calc(26/16), 0.02em);
         }
+                @include tablet {
+                    @include font(400, 14px, calc(26/14), 0.02em);
+                    margin-bottom: 77px;
+                }
+                                @include desktop {
+                            
+                                    margin-bottom: 42px;
+                                }
 }
 
 .about__button {}
