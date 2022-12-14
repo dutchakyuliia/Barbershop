@@ -25,7 +25,12 @@
               srcset="./images/logo-light.svg"
               media="(max-width: 767px)"
             />
-            <img src="./images/logo-light.svg" alt="logo" width="69" height="56"
+            <img
+              src="./images/logo-light.svg"
+              alt="logo"
+              width="69"
+              height="56"
+            />
           </picture>
         </a>
         <div class="header__wrap">
@@ -46,7 +51,11 @@
             </ul>
           </nav>
           <div class="header__contact-wrap">
-            <button class="button header__button button--light" type="button">
+            <button
+              class="button header__button button--light"
+              type="button"
+              data-modal-open
+            >
               Online-booking
             </button>
             <a class="header__contact" href="tel:+380441111111"
@@ -56,7 +65,7 @@
         </div>
         <button class="btn-menu btn-menu--open" type="button" data-menu-open>
           <svg class="btn-open-icon" width="40" height="40">
-            <use href="./images/social.icons.svg#icon-menu"></use>
+            <use href="./images/sprite.svg#icon-menu"></use>
           </svg>
         </button>
       </div>
@@ -68,7 +77,7 @@
             data-menu-close
           >
             <svg class="btn-close-icon" width="40" height="40">
-              <use href="./images/social.icons.svg#icon-close"></use>
+              <use href="./images/sprite.svg#icon-close"></use>
             </svg>
           </button>
           <nav class="navigation menu-mobile__navigation">
@@ -91,7 +100,11 @@
           <a class="menu-mobile__contact" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button class="button menu-mobile__button button--dark" type="button">
+          <button
+            class="button menu-mobile__button button--dark"
+            type="button"
+            data-modal-open
+          >
             Online-booking
           </button>
           <ul class="soc-list soc-list__mobile-menu">
@@ -224,7 +237,11 @@
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button class="about__button button button--dark" type="button">
+            <button
+              class="about__button button button--dark"
+              type="button"
+              data-modal-open
+            >
               ONLINE-BOOKING
             </button>
           </div>
@@ -257,7 +274,7 @@
               </li>
             </ul>
 
-            <ul class="table-list">
+            <ul class="table-list table-list--second">
               <li class="table-list__item">
                 <p class="table-list__text">Trainee’s haircut</p>
                 <span class="table-list__text">from 50 uah.</span>
@@ -277,21 +294,29 @@
               </li>
             </ul>
           </div>
-          <button class="prices__button button button--light" type="button">
+          <button
+            class="prices__button button button--light"
+            type="button"
+            data-modal-open
+          >
             ONLINE-BOOKING
           </button>
         </div>
       </section>
       <section class="section benefits">
         <div class="container benefits__container">
-          <p class="benefits__uptitle uptitle--dark uptitle">
-            Old traditional school
-          </p>
-          <h2 class="benefits__title section-title">¿Why people come to us?</h2>
-          <p class="benefits__text">
-            Only good things are said about us. But it's better to see and feel
-            1 time than read 10 times.
-          </p>
+          <div>
+            <p class="benefits__uptitle uptitle--dark uptitle">
+              Old traditional school
+            </p>
+            <h2 class="benefits__title section-title">
+              ¿Why people come to us?
+            </h2>
+            <p class="benefits__text">
+              Only good things are said about us. But it's better to see and
+              feel 1 time than read 10 times.
+            </p>
+          </div>
           <div class="benefits__wrap">
             <ul class="benefits-list">
               <li class="benefits-list__item">
@@ -633,91 +658,95 @@
           </ul>
         </div>
       </section>
-      <div class="container online-contacts__container">
-        <section class="section online">
-          <h2 class="online__title section-title">Online-booking</h2>
-          <form class="online__form">
-            <div class="online__name-tel-wrap">
-              <div class="online__wrap">
-                <label for="online-name" class="online__label">Name*</label>
-                <input
-                  type="text"
-                  class="online__input"
-                  name="online-name"
-                  id="online-name"
-                  placeholder=" "
-                />
+      <div class="online-contacts-wrap">
+        <div class="container online-contacts__container">
+          <section class="section online">
+            <h2 class="online__title section-title">Online-booking</h2>
+            <form class="online__form">
+              <div class="online__name-tel-wrap">
+                <div class="online__wrap">
+                  <input
+                    type="text"
+                    class="online__input"
+                    name="online-name"
+                    id="online-name"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="online-name" class="online__label">Name*</label>
+                </div>
+                <div class="online__wrap">
+                  <input
+                    type="tel"
+                    class="online__input"
+                    name="online-tel"
+                    id="online-tel"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="online-tel" class="online__label">Phone*</label>
+                </div>
               </div>
-              <div class="online__wrap">
-                <label for="online-tel" class="online__label">Phone*</label>
-                <input
-                  type="tel"
-                  class="online__input"
-                  name="online-tel"
-                  id="online-tel"
+              <div class="online__textarea-wrap">
+                <textarea
+                  name="online-mess"
+                  id="online-mess"
+                  class="online__text"
                   placeholder=" "
-                />
+                ></textarea>
+                <label
+                  for="online-mess"
+                  class="online__label online__label--message"
+                  >Message</label
+                >
+              </div>
+              <button type="submit" class="button online__button">Send</button>
+            </form>
+          </section>
+          <section class="section contacts" id="contacts">
+            <h2 class="contacts__title section-title">Contacts</h2>
+            <div class="contacts__wrap">
+              <address class="contacts__address">
+                <ul class="contacts__list">
+                  <li class="contacts__item">
+                    <svg class="contact__icon" width="24" height="24">
+                      <use href="./images/sprite.svg#icon-place"></use>
+                    </svg>
+                    <a
+                      class="contacts__link contacts__link--place"
+                      href="https://goo.gl/maps/oKYZWMwzyQTYq2JNA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >st. Vasilkovaya, 7A Kiev, 08132</a
+                    >
+                  </li>
+                  <li class="contacts__item">
+                    <svg class="contact__icon" width="24" height="24">
+                      <use href="./images/sprite.svg#icon-tel"></use>
+                    </svg>
+                    <a class="contacts__link" href="tel:+380441111111"
+                      >+38 044 111 11 11</a
+                    >
+                  </li>
+                  <li class="contacts__item">
+                    <svg class="contact__icon" width="24" height="24">
+                      <use href="./images/sprite.svg#icon-mail"></use>
+                    </svg>
+                    <a class="contacts__link" href="mailto:barbershop@email.com"
+                      >barbershop@email.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+              <div class="contacts-schedule-wrap">
+                <span class="contacts__schedule-title">Working hours</span>
+                <p class="contacts__schedule-text">
+                  Every day from 9:00 to 22:00
+                </p>
               </div>
             </div>
-            <div class="online__textarea-wrap">
-              <label
-                for="online-mess"
-                class="online__label online__label--message"
-                >Message</label
-              >
-              <textarea
-                name="online-mess"
-                id="online-mess"
-                class="online__text"
-                placeholder=" "
-              ></textarea>
-            </div>
-            <button type="submit" class="button online__button">Send</button>
-          </form>
-        </section>
-        <section class="section contacts" id="contacts">
-          <h2 class="contacts__title section-title">Contacts</h2>
-          <div class="contacts__wrap">
-            <address class="contacts__address">
-              <ul class="contacts__list">
-                <li class="contacts__item">
-                  <svg class="contact__icon" width="24" height="24">
-                    <use href="./images/sprite.svg#icon-place"></use>
-                  </svg>
-                  <a
-                    class="contacts__link contacts__link--place"
-                    href="https://goo.gl/maps/oKYZWMwzyQTYq2JNA"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >st. Vasilkovaya, 7A Kiev, 08132</a
-                  >
-                </li>
-                <li class="contacts__item">
-                  <svg class="contact__icon" width="24" height="24">
-                    <use href="./images/sprite.svg#icon-tel"></use>
-                  </svg>
-                  <a class="contacts__link" href="tel:+380441111111"
-                    >+38 044 111 11 11</a
-                  >
-                </li>
-                <li class="contacts__item">
-                  <svg class="contact__icon" width="24" height="24">
-                    <use href="./images/sprite.svg#icon-mail"></use>
-                  </svg>
-                  <a class="contacts__link" href="mailto:barbershop@email.com"
-                    >barbershop@email.com</a
-                  >
-                </li>
-              </ul>
-            </address>
-            <div class="contacts-schedule-wrap">
-              <span class="contacts__schedule-title">Working hours</span>
-              <p class="contacts__schedule-text">
-                Every day from 9:00 to 22:00
-              </p>
-            </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </main>
     <footer class="footer">
@@ -731,6 +760,64 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+          <svg class="modal-close-icon" width="18" height="18">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <form class="modal__form">
+          <div class="modal__name-tel-wrap">
+            <div class="modal__wrap">
+              <label for="modal-name" class="modal__label">Name*</label>
+              <input
+                type="text"
+                class="modal__input"
+                name="modal-name"
+                id="modal-name"
+                placeholder=" "
+                required
+              />
+            </div>
+            <div class="modal__wrap">
+              <label for="modal-tel" class="modal__label">Phone*</label>
+              <input
+                type="tel"
+                class="modal__input"
+                name="modal-tel"
+                id="modal-tel"
+                placeholder=" "
+                required
+              />
+            </div>
+            <div class="modal__wrap">
+              <label for="modal-mail" class="modal__label">Mail*</label>
+              <input
+                type="mail"
+                class="modal__input"
+                name="modal-mail"
+                id="modal-mail"
+                placeholder=" "
+                required
+              />
+            </div>
+          </div>
+          <div class="modal__textarea-wrap">
+            <label for="modal-mess" class="modal__label modale__label--message"
+              >Message</label
+            ><textarea
+              name="modal-mess"
+              id="modal-mess"
+              class="modal__text"
+              placeholder=" "
+            ></textarea>
+          </div>
+          <button type="submit" class="button modal__button">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
   </body>
 </html>

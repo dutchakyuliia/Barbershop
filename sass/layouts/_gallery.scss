@@ -1,7 +1,11 @@
 .gallery {}
 
 
-.gallery__container {}
+.gallery__container {
+    @include desktop {
+        padding: 0;
+    }
+}
 
 .gallery__uptitle {
     margin-bottom: 71px;
@@ -16,7 +20,9 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
+        justify-content: center;
     }
+    
 }
 
 .gallery__item {
@@ -25,8 +31,8 @@
         margin-bottom: 30px;
     }   
     }
-    
-@include tablet {
+@media screen and(max-width: 1199px) {
     flex-basis: calc((100% - 30px) / 2);
 }
+ 
 }

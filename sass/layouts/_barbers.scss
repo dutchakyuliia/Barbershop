@@ -15,6 +15,10 @@
 
 .barbers__list {
   margin: 0 auto;
+  @include desktop {
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .barbers__item {
@@ -62,6 +66,7 @@ justify-content: center;
     border-radius: 50%;
     background-color: $color-white;
     color: $color-black;
+    transition: color 250ms linear;
     &:hover, &:focus {
         color: $color-orange;
         

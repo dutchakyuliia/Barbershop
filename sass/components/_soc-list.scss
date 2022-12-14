@@ -5,6 +5,15 @@
  @include max-mobile {
 flex-direction: column;
 gap: 24px;
+&::before {
+    position: absolute;
+    top: 10px;
+    left: 0;
+        width: 60px;
+        height: 1px;
+        background-color: $color-black;
+        content: "";
+    }
  }
 
  &::before {
@@ -15,21 +24,13 @@ gap: 24px;
  }
 }
 
-.soc-list__item {
-    
-    
-   
-}
-
 .soc-list__link {
     @include font(600, 14px, 1.36, 0.2em);
     color: $color-black;   
-     @include max-mobile {
-    
-    }
+    transition: color 250ms linear;
          &:hover,
          &:focus {
-             color: $color-orange
+             color: $color-orange;
          }
 
 

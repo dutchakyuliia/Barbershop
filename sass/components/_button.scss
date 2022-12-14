@@ -10,7 +10,11 @@ min-width: 160px;
      background-color: transparent;
      border: 1px solid $color-orange;
     border-radius: 25px;
-        
+    transition: background-color 250ms linear, color 250ms linear ;
+     &:hover, &:focus {
+        background-color: $color-orange;
+        color: $color-white;
+     }   
 }
 
 

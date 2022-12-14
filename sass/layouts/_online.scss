@@ -31,15 +31,18 @@
     color: rgba(157, 164, 189, 0.4);
     border: none;
      border-bottom: 1px solid rgba(157, 164, 189, 0.4);
-     padding-left: 54px;
+     transition: border 250ms linear;
      &:focus-within {
         outline: transparent;
         color: $color-white;
         border-bottom: 1px solid $color-white;
         }
         @include tablet {
-            min-width: 300px;
+            width: 300px;
         }
+                 @include desktop {
+                    width: 270px;
+                 }
      }
 
 
@@ -49,10 +52,22 @@
     @include font(600, 11px, calc(15/11), 0.1em);
     text-transform: uppercase;
     color: rgba(157, 164, 189, 0.4);
- & + .online-input:focus-within {
-    color: $color-white;
+
+         transition: transform 200ms linear,
+         color 200ms linear;
+    .online__input:focus + &,
+    .online__input:not(:placeholder-shown) + & {
+        transform: translateY(-100%);
+        color: $color-white;
+    }
+        
 }
-    
+.online__label--message {
+   .online__text:focus + &,
+   .online__text:not(:placeholder-shown) + & {
+    transform: translateY(-100%);
+        color: $color-white;
+   }
 }
 
 .online__textarea-wrap {
@@ -70,7 +85,7 @@
         border: none;
         border-bottom: 1px solid rgba(157, 164, 189, 0.4);
           
-            padding-left: 65px;
+        
             &:focus-within {
                     outline: transparent; 
                     color: $color-white;

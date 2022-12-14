@@ -6,7 +6,11 @@
     @include tablet {
         display: flex;
         gap: 30px;
+        padding: 0;
     }
+        @include desktop {
+            padding: 0 31px;
+        }
 }
 
 .picture-list {
@@ -62,18 +66,20 @@
 .about__text {
     @include font(400, 10px, calc(16/10), 0.02em);
         color: $primary-text-color;
-    margin-bottom: 40px;
+    margin-bottom: 46px;
     @include mobile {
             @include font(400, 16px, calc(26/16), 0.02em);
         }
                 @include tablet {
                     @include font(400, 14px, calc(26/14), 0.02em);
-                    margin-bottom: 77px;
+                
                 }
                                 @include desktop {
-                            
-                                    margin-bottom: 42px;
+                            margin-bottom: 40px;
+                                   
                                 }
 }
 
-.about__button {}
+.about__button {
+   
+}

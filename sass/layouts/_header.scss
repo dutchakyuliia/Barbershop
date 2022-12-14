@@ -21,6 +21,7 @@
 }
 
 .header__logo {
+    margin-left: 8px;
     margin-right: 60px;
     @include desktop {
         margin-right: 131px;
@@ -72,13 +73,17 @@ display: flex;
 .header__contact {
     @include font(600, 12px, calc(16/12), 0.1em);
     color: $color-white;
+    transition: color 250ms linear;
+    &:focus, &:hover {
+        color: $color-orange;
+    }
 }
 .menu-mobile {
     position: fixed;
         top: 0;
         right: 0;
         z-index: 1;
-        width: 337px;
+        width: 100vw;;
         height: 100vh;
         background-color: $backgroud-color;
         padding-top: 118px;
@@ -95,8 +100,9 @@ display: flex;
 .btn-menu {
     display: flex;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
 background-color: transparent;
 border: none;
  @include tablet {
@@ -108,7 +114,7 @@ border: none;
 .btn-menu--close {
  position: absolute;
     top: 48px;
-    right: 31px;   
+    right: 10px;   
 }
 .btn-close-icon {
 fill: currentColor;

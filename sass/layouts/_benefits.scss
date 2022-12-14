@@ -2,6 +2,12 @@
 }
 
 .benefits__container {
+   
+    @include desktop {
+        display: flex;
+        justify-content: center;
+       
+    }
 }
 
 .benefits__uptitle {
@@ -27,60 +33,93 @@
 }
 
 .benefits__wrap {
+    @include desktop{
+    order: -1;
+margin-right: 130px;
+}    
+    }
 
-}
 
 .benefits-list {
        display: flex;
     flex-wrap: wrap; 
     @media screen and (max-width: 479px) {
-    justify-content: center; 
-    gap: 30px;   
-    }
+            
+        justify-content: center;
     
+        }
+    @include desktop {
+    justify-content: center;
+    width: 370px;
+    }
     
 }
 
 .benefits-list__item {
    text-align: center;
     background-color: #F7F7F7; 
-    width: 193px;
-    height: 133px;
-    padding: 20px 35px;
+    width: 120px;
+    height: 110px;
+    padding: 10px 20px;
    
-@include mobile {
+ 
     &:nth-child(2) {
-        margin-top: 35px;
-        margin-left: 30px;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    &:nth-child(4) {
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    @include mobile {padding: 20px 35px;
+   width: 193px; 
+    height: 133px;
+     &:nth-child(2) {
+        margin-top: 25px;
+        margin-left: 20px;
     }
 &:nth-child(4) {
-    margin-top: 35px;
-        margin-left: 30px;
-}
-}
+    margin-top: 25px;
+        margin-left: 20px;
+}   
+    }
+    
 @include tablet {
     width: 210px;
+}
+@include desktop {
+    width: 170px;
 }
 }
 
 .benefits-list__numbers {
-
-    margin-bottom: 6px;
-    @include font(700, 42px, calc(57/42), 0.05em);
+   
+    @include font(700, 32px, calc(39/32), 0.05em);
         color: $color-black;
     
         @include mobile {
+    
             @include font(700, 42px, calc(57/42), 0.05em);
         }
 }
 
 .benefits-list__plus {
    
-@include font(600, 16px, calc(22/16), 0.02em);
+@include font(600, 12px, calc(18/12), 0.02em);
     color: $color-orange;
+    @include mobile {
+        @include font(600, 16px, calc(22/16), 0.02em);
+    }
 }
 
 .benefits-list__text {
-@include font(600, 11px, calc(15/11), 0.02em);
+    margin-top: 6px;
+@include font(600, 9px, calc(12/9), 0.02em);
 color: $color-black; 
+ @include mobile {
+    
+    @include font(600, 11px, calc(15/11), 0.02em);
+ }
 }

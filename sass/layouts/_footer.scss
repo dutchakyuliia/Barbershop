@@ -49,6 +49,7 @@
 .footer__link {
     @include font(600, 11px, calc(15/11), 0.02em);
         color: $color-black;
+        transition: color 250ms linear;
         &:focus, &:hover {
             color: $color-orange;
         }

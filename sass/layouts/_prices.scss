@@ -15,6 +15,8 @@
                 }
         }
                                 @include desktop {
+                                    background-position: center;
+                                    
                                     background-image: url(../images/prices-desk-min.png);
                 
                                     @include retina {
@@ -26,7 +28,10 @@
 }
 
 .prices__container {
-    padding: 0;
+   
+    @include desktop {
+        padding: 0 31px;
+    }
 }
 
 .prices__uptitle {
@@ -40,32 +45,54 @@
 }
 
 .prices__wrap {
-    background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
-    margin-bottom: 44px;
+     margin-bottom: 44px;
+     @media screen and (max-width: 1199px) {
+        background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+   
     padding: 30px 20px 30px 40px;
+    }
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
 }
 
 .table-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @include desktop {
+        padding: 30px 20px;
+        width: 570px;
+    }
 }
 .table-list--first {
-      margin-bottom: 20px;   
-    
+       
+      @media screen and (max-width: 1199px)  {
+        margin-bottom: 20px; 
+      }
+    @include desktop {
+        background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+    }
    
+}
+.table-list--second {
+    @include desktop {
+        background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+    }
 }
 .table-list__item {
     display: flex;
 justify-content: space-between;
 align-items: baseline;
-    gap: 4px;
+    gap: 10px;
 &::before {
     content: "";
 min-width: 8px;
     height: 1px;
     flex-grow: 1;
-    background-color: rgba(157, 164, 189, 0.12);
+    background-color: rgba(157, 164, 189, 0.429);
 }
 }
 
