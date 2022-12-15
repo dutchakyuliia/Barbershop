@@ -61,7 +61,10 @@ margin-right: 130px;
     width: 120px;
     height: 110px;
     padding: 10px 20px;
-   
+    
+    @media screen and (min-width: 432px) and (max-width: 479px) {
+        width: 140px;
+    }
  
     &:nth-child(2) {
         margin-top: 15px;

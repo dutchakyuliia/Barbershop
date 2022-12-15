@@ -32,7 +32,10 @@
 .picture-list__item {}
 
 .about__wrap {
-    max-width: 330px;
+    
+    @include tablet {
+     max-width: 330px;   
+    }
     @include desktop {
         max-width: 470px;
     }
