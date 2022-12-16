@@ -83,15 +83,16 @@ display: flex;
         top: 0;
         right: 0;
         z-index: 1;
-        width: 100vw;;
+        width: 100vw;
         height: 100vh;
+            
         background-color: $backgroud-color;
-        padding-top: 118px;
-        padding-bottom: 118px;
         >.container {
-            height: 100%;
+           position: relative;
+            padding-top: 118px;
+        padding-bottom: 118px; 
+        height: 100%;
         }
-    
         @include tablet {
             display: none;
         }
@@ -114,7 +115,7 @@ border: none;
 .btn-menu--close {
  position: absolute;
     top: 48px;
-    right: 10px;   
+    right: 20px;   
 }
 .btn-close-icon {
 fill: currentColor;
@@ -136,4 +137,5 @@ margin-bottom: 64px;
 
 }
 .soc-list__mobile-menu {
+    
 }

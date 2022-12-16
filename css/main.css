@@ -59,6 +59,7 @@ body {
 }
 
 .section {
+  outline: 3px solid red;
   padding-top: 84px;
   padding-bottom: 84px;
 }
@@ -542,10 +543,11 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: #ffffff;
-  padding-top: 118px;
-  padding-bottom: 118px;
 }
 .menu-mobile > .container {
+  position: relative;
+  padding-top: 118px;
+  padding-bottom: 118px;
   height: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -576,7 +578,7 @@ body {
 .btn-menu--close {
   position: absolute;
   top: 48px;
-  right: 10px;
+  right: 20px;
 }
 
 .btn-close-icon {
