@@ -59,7 +59,6 @@ body {
 }
 
 .section {
-  outline: 3px solid red;
   padding-top: 84px;
   padding-bottom: 84px;
 }
@@ -578,7 +577,7 @@ body {
 .btn-menu--close {
   position: absolute;
   top: 48px;
-  right: 20px;
+  right: 15px;
 }
 
 .btn-close-icon {
